@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="landscape">
+    <meta name="x5-orientation" content="landscape">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Victors - Casino Game Development</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For Font Awesome icons -->
+</head>
+<body>
+    <header id="header">
+        <img src="assets/images/VVLogo.jpg" alt="Virtual Victors Logo" id="logo">
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <!-- <li><a href="#about">Vision and Strategy</a></li> -->
+                <li><a href="#games">Our Games</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <h1>Welcome to Virtual Victors</h1>
+            <p>Virtual Victors aims to deliver a premium gaming experience for the global iGaming industry, through innovative solutions and products. Through high-performance slot and casino games tailored for global online operators, Virtual Victors focuses on immersive gameplay, visually striking design, and seamless integration. Our portfolio will include a blend of classic casino aesthetics with modern mechanics, ensuring wide appeal across global markets, delivering content that meets the highest standards of innovation, engagement, and compliance.
+            </p>
+        </section>
+
+        <section id="about">
+            <h1>This Website is currently under construction. In the meantime, have a look at one of our games below!</h1>
+        </section>
+
+<!--         <section id="about">
+            <h1>Vision and Strategy</h1>
+            <p>We are passionate about creating innovative and engaging casino games.</p>
+            
+           
+            <h2>Goal</h2>
+            <p>Our initial vision is to penetrate the market and become a lead B2B game provider, by utilizing existing contacts with major operators in the Balkan region, with initial expansion plans across EMEA.</p>
+            
+            
+            <h2>Strategy</h2>
+            <p>Develop a secure, stable and seamless Remote Game Server (RGS) and high-quality games, monetized through revenue-sharing partnerships with operators.</p>
+        </section> -->
+
+        <section id="games">
+            <h1>Our Games</h1>
+            <p>Check out our demo game below:</p>
+                <iframe src="https://game.virtualvictors.com/ThunderJoker/?APIUrl=wss%3a%2f%2fgameserver-demo-socket-msstg.virtualvictors.rs%2fvltapi%2fConnection%2fGetConnectToChannelA&backToLobbyEnabled=False&gameId=2000001&gameName=godOfThunderstorm&isIFrame=True&language=eng&lobbyBackUrl=http%3a%2f%2fgameserver-demo-msstg.virtualvictors.rs%2flaunch%3fmoneyType%3d0%26gameName%3d%26currency%3dEUR%26languageCode%3deng&platform=desktop&showHistoryButton=True&refreshUrl=http%3a%2f%2fgameserver-store-msstg.virtualvictors.rs%2fPlayer%2fPlay&portalId=4&demo=1&disableReload=False&sessionId=c4f044a3-28f1-47d7-a305-bccdc5d43139&liveRouletteId=-1&balanceShow=CashAndCredit&denominationShow=True&ccy=EUR&gameServerUrl=https://gameserver-demo-msstg.virtualvictors.rs/&reloadUrl=http%3a%2f%2fgameserver-store-msstg.virtualvictors.rs%2fHome%2fIntegrationGameLaunchBundle%2fvirtualvictors-stg16%3fmoneyType%3d0%26gameName%3dgodOfThunderstorm%26platform%3ddesktop%26languageCode%3deng%26currency%3dEUR&accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJbnRlZ3JhdGlvblR5cGUiOiIwIiwiUGxheWVyR3VpZCI6IjhlNjE2MTA3LTI4ZjMtNDY0My1iNDhiLTdiMjZkMzIwOGY3MSIsIk1vbmV5VHlwZSI6IjAiLCJQb3J0YWxJZCI6IjQiLCJJc0ZyZWVVc2VyIjoiVHJ1ZSIsIkdhbWVOYW1lIjoiZ29kT2ZUaHVuZGVyc3Rvcm0iLCJuYmYiOjE3MjIzMzcwNTEsImV4cCI6MTcyMjMzNzExMSwiaWF0IjoxNzIyMzM3MDUxfQ.AydcgXVGqCHzQeasDCMvWwOFQcStONLFR13gL18Cyn0&refreshToken=uqeG0UG5Xc1KJ832U8kK1yj8N7B1BsHWTn7ba2zsYc" max-width="1900px" height="1080px" frameborder="0" allowfullscreen></iframe>
+            <p>*** For best results, play our demo on your Mobile Phone ***</p>
+        </section>
+        <!-- Add this inside the body tag -->
+        
+
+
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <form id="contact-form" action="https://formsubmit.co/info@virtualvictors.com" method="POST" enctype="multipart/form-data">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <div id="coin-container"></div>
+    <footer>
+        <p>&copy; 2025 Virtual Victors. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

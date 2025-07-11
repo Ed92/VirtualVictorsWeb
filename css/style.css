@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #002957;  /* Blue color for the background */
+    --gold: #d6a549;  /* Gold color for text */
+    --white: #FFFFFF;
+    --gray-light: #F1F1F1;
+    --gray-dark: #333;
+    --black: #000000;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--white);  /* Set body background to white for a clean look */
+    color: var(--gray-dark);
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    line-height: 1.6; /* Increase line height for readability */
+}
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+header {
+    background-color: var(--blue);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--gold);  /* Adds a gold border below header for contrast */
+}
+
+#logo {
+    width: 120px;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+#navbar ul li {
+    margin: 0 20px;
+}
+
+#navbar ul li a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#navbar ul li a:hover {
+    background-color: var(--gold);
+    color: var(--blue);
+    border-radius: 5px;
+}
+
+/* Sections */
+section {
+    margin-top: 100px;  /* Ensure sections are not hidden under the fixed header */
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--gray-light);  /* Light gray background for sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for sections */
+    margin-bottom: 40px;  /* Margin below sections for spacing */
+}
+
+
+.home{
+    margin-top: 100px;
+}
+
+section h1 {
+    font-size: 36px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    color: var(--gray-dark);
+}
+
+
+section h2 {
+    font-size: 36px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding shadow to form */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid var(--gray-light);
+    border-radius: 5px;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: var(--gold);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #d1a23b; /* Darker gold on hover */
+}
+
+/* Footer */
+footer {
+    background-color: var(--blue);
+    text-align: center;
+    padding: 20px 0;
+    color: var(--gold);
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+    #logo {
+        width: 120px;
+    }
+
+    #navbar ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+}
+
+
+
+/* Ensure iframe is responsive */
+iframe {
+    width: 100%;
+    max-width: 100%; 
+    height: 450px; 
+    border: none;
+}
+/* Mobile: Fullscreen landscape iframe */
+@media (max-width: 768px) {
+    iframe {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+/* Tablet/Desktop: Fixed size and centered */
+@media (min-width: 769px) {
+    iframe {
+        width: 1280px;
+        height: 720px;
+        max-width: 100%;
+        max-height: calc(100vh - 100px); /* adjust if needed */
+    }
+}
+
+#coin-container {
+    position: fixed;
+    bottom: 20px;  /* Make sure it's not too close to the edge */
+    right: 20px;   /* Make sure it's not too close to the edge */
+    pointer-events: none;
+}
+
+.coin {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: gold;
+    border-radius: 50%;
+    opacity: 0;
+    animation: explode 1s forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2) translateX(30px) translateY(-30px); /* Move the coin diagonally */
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0) translateX(60px) translateY(-100px); /* Coin moves further */
+        opacity: 0;
+    }
+}
+
